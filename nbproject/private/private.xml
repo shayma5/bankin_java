@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/GUI/AddAccount.fxml</file>
+            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/Entities/Account.java</file>
+            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/GUI/AccountCrudController.java</file>
+            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/GUI/AccountCrudMain.java</file>
+            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/Entities/Sexe.java</file>
+            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/Services/AccountServices.java</file>
+            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/Interfaces/AbonnementInterface.java</file>
+            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/Utils/ListSexe.java</file>
+            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/Entities/Service.java</file>
+            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/bankin/Bankin.java</file>
+            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/Services/AbonnementServices.java</file>
+            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/GUI/AddAccountController.java</file>
+            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/ConnectionDB/MyConnection.java</file>
+        </group>
+    </open-files>
+</project-private>

@@ -86,7 +86,7 @@
                                           <Label layoutX="128.0" layoutY="448.0" prefHeight="17.0" prefWidth="36.0" text="taux" />
                                           <Label layoutX="131.0" layoutY="384.0" text="duree" />
                                           <Label layoutX="130.0" layoutY="315.0" text="revenu" />
-                                          <Label layoutX="120.0" layoutY="238.0" text="Date_travail" />
+                                          <Label layoutX="120.0" layoutY="238.0" text="Date du travail" />
                                           <Label alignment="CENTER" layoutX="126.0" layoutY="173.0" text="Poste" />
                                           <Label layoutX="120.0" layoutY="122.0" text="Raison" />
                                           <Button fx:id="btnvalider1" layoutX="652.0" layoutY="480.0" mnemonicParsing="false" onAction="#valider" prefHeight="51.0" prefWidth="110.0" styleClass="update-btn" stylesheets="@../../../../../../Downloads/Pidev/Pidev/src/gui/dashboardDesign.css" text="Ajouter" />

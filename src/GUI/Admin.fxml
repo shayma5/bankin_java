@@ -77,7 +77,7 @@
                                           <TableColumn fx:id="montantcolumn" prefWidth="75.0" text="Montant" />
                                           <TableColumn fx:id="raisoncolumn" prefWidth="142.0" text="Raison" />
                                           <TableColumn fx:id="postecolumn" prefWidth="142.0" text="Poste" />
-                                          <TableColumn fx:id="debutcolumn" prefWidth="146.0" text="Debut_travail" />
+                                          <TableColumn fx:id="debutcolumn" prefWidth="146.0" text="Debut du travail" />
                                           <TableColumn fx:id="revenucolumn" prefWidth="253.0" text="Revenu" />
                                           <TableColumn fx:id="dureecolumn" prefWidth="75.0" text="duree" />
                                           <TableColumn fx:id="tauxcolumn" prefWidth="75.0" text="taux" />

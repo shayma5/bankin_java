@@ -40,6 +40,7 @@
                                     <Image url="@../Images/325149874_1139825106730136_6541065043253681926_n.png" />
                                  </image>
                               </ImageView>
+                              <Button fx:id="btn_importer1" layoutX="-3.0" layoutY="307.0" mnemonicParsing="false" onAction="#Stat" prefHeight="51.0" prefWidth="221.0" styleClass="add-btn" stylesheets="@../../../../../../Downloads/Pidev/Pidev/src/gui/dashboardDesign.css" text="Statistique" />
                            </children>
                         </AnchorPane>
                         <Text fill="WHITE" layoutX="73.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin">

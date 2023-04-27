@@ -7,6 +7,7 @@ package GUI;
 
 import Entities.Account;
 import Services.AccountServices;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
 import java.util.ResourceBundle;
@@ -14,7 +15,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -61,6 +65,32 @@ public class AdminController implements Initializable {
     private TableColumn<Account, String> column_cin;
     @FXML
     private TableColumn<Account, Integer> column_solde;
+    @FXML
+    private Button btn_importer1;
+    @FXML
+    private AnchorPane addEmployee_form;
+    @FXML
+    private TextField addEmployee_employeeID;
+    @FXML
+    private TextField addEmployee_firstName;
+    @FXML
+    private TextField addEmployee_lastName;
+    @FXML
+    private TextField addEmployee_phoneNum;
+    @FXML
+    private ImageView addEmployee_image;
+    @FXML
+    private AnchorPane salary_form;
+    @FXML
+    private TextField salary_employeeID;
+    @FXML
+    private Label salary_firstName;
+    @FXML
+    private Label salary_lastName;
+    @FXML
+    private Label salary_position;
+    @FXML
+    private TextField salary_salary;
    
     
     /**
@@ -91,6 +121,19 @@ public class AdminController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         show();
     }    
+
+    @FXML
+    private void Stat(ActionEvent event) {
+        try {
+            // Charger la nouvelle scène FXML
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("chart.fxml"));
+            Parent root = loader.load();
+            // Définir la nouvelle racine de la scène actuelle
+            ((Node) event.getSource()).getScene().setRoot(root);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     
 }

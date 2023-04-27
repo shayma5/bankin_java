@@ -131,8 +131,8 @@ table_ab.refresh();
        // Afficher un message d'erreur
        Alert alert = new Alert(Alert.AlertType.ERROR);
        alert.setTitle("Erreur");
-       alert.setHeaderText("Impossible de supprimer la boutique ");
-       alert.setContentText("Veuillez sélectionner une boutique à supprimer !");
+       alert.setHeaderText("Impossible de supprimer l'abonnement ");
+       alert.setContentText("Veuillez sélectionner un abonnement à supprimer !");
        alert.showAndWait();
        return;
     }

@@ -29,6 +29,32 @@ public class AdminAbonnementController {
 
     @FXML
     private TextField txtnprix;
+    @FXML
+    private Label username;
+    @FXML
+    private AnchorPane addEmployee_form;
+    @FXML
+    private TextField addEmployee_employeeID;
+    @FXML
+    private TextField addEmployee_firstName;
+    @FXML
+    private TextField addEmployee_lastName;
+    @FXML
+    private TextField addEmployee_phoneNum;
+    @FXML
+    private ImageView addEmployee_image;
+    @FXML
+    private AnchorPane salary_form;
+    @FXML
+    private TextField salary_employeeID;
+    @FXML
+    private Label salary_firstName;
+    @FXML
+    private Label salary_lastName;
+    @FXML
+    private Label salary_position;
+    @FXML
+    private TextField salary_salary;
 
    
     @FXML

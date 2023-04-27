@@ -68,7 +68,39 @@ public class AccountCrudController implements Initializable {
     private File file;
     @FXML
     private AnchorPane main_form;
-    
+    @FXML
+    private Label username;
+    @FXML
+    private AnchorPane home_form;
+    @FXML
+    private Button btn_importer;
+    @FXML
+    private Button btn_ajouter;
+    @FXML
+    private AnchorPane addEmployee_form;
+    @FXML
+    private TextField addEmployee_employeeID;
+    @FXML
+    private TextField addEmployee_firstName;
+    @FXML
+    private TextField addEmployee_lastName;
+    @FXML
+    private TextField addEmployee_phoneNum;
+    @FXML
+    private ImageView addEmployee_image;
+    @FXML
+    private AnchorPane salary_form;
+    @FXML
+    private TextField salary_employeeID;
+    @FXML
+    private Label salary_firstName;
+    @FXML
+    private Label salary_lastName;
+    @FXML
+    private Label salary_position;
+    @FXML
+    private TextField salary_salary;
+   
    
       
 

@@ -20,6 +20,7 @@ public class Bank_in extends Application {
          
            //FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/Ajouterpret.fxml"));
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/Admin.fxml"));
+            //FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/chart.fxml"));
           
 
             

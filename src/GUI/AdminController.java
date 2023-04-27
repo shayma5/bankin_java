@@ -9,6 +9,7 @@ import Entities.Etatpret;
 import Entities.Pret;
 import Services.EtatpretServices;
 import Services.PretServices;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
 import java.util.Optional;
@@ -18,13 +19,20 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 /**
  * FXML Controller class
@@ -52,9 +60,41 @@ public class AdminController implements Initializable {
     @FXML
     private TableColumn<Pret, String> etat;
     @FXML
+    private AnchorPane main_form;
+    @FXML
+    private Label username;
+    @FXML
+    private AnchorPane home_form;
+    @FXML
+    private AnchorPane addEmployee_form;
+    @FXML
+    private TextField addEmployee_employeeID;
+    @FXML
+    private TextField addEmployee_firstName;
+    @FXML
+    private TextField addEmployee_lastName;
+    @FXML
+    private TextField addEmployee_phoneNum;
+    @FXML
+    private ImageView addEmployee_image;
+    @FXML
+    private AnchorPane salary_form;
+    @FXML
+    private TextField salary_employeeID;
+    @FXML
+    private Label salary_firstName;
+    @FXML
+    private Label salary_lastName;
+    @FXML
+    private Label salary_position;
+    @FXML
+    private TextField salary_salary;
+    @FXML
     private Button btnmodifier;
     @FXML
     private Button btndelete;
+    @FXML
+    private Button btnmodifier1;
    
 
     /**
@@ -89,7 +129,7 @@ public class AdminController implements Initializable {
     Pret selectedPret = pret_table.getSelectionModel().getSelectedItem();
     if (selectedPret == null) {
         Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setContentText("Veuillez sélectionner un produit à modifier !");
+        alert.setContentText("Veuillez sélectionner un etat à modifier !");
         alert.showAndWait();
         return;
     }
@@ -123,8 +163,8 @@ public class AdminController implements Initializable {
        // Afficher un message d'erreur
        Alert alert = new Alert(Alert.AlertType.ERROR);
        alert.setTitle("Erreur");
-       alert.setHeaderText("Impossible de supprimer la boutique ");
-       alert.setContentText("Veuillez sélectionner une boutique à supprimer !");
+       alert.setHeaderText("Impossible de supprimer le pret ");
+       alert.setContentText("Veuillez sélectionner un pret à supprimer !");
        alert.showAndWait();
        return;
    }
@@ -132,9 +172,22 @@ public class AdminController implements Initializable {
       //System.out.println(selectedLN.getId_b());
       PretServices ps = new PretServices();
        ps.supprimePret(selectedLN);
+       show();
         
         
-        
+    }
+
+    @FXML
+    private void Stat(ActionEvent event) {
+        try {
+            // Charger la nouvelle scène FXML
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("chart.fxml"));
+            Parent root = loader.load();
+            // Définir la nouvelle racine de la scène actuelle
+            ((Node) event.getSource()).getScene().setRoot(root);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
         
         

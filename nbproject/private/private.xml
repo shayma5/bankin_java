@@ -3,16 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/HP/OneDrive/Bureau/Bankin1/src/Interfaces/IPretCrud.java</file>
             <file>file:/C:/Users/HP/OneDrive/Bureau/Bankin1/src/ConnectionDB/MyConnection.java</file>
             <file>file:/C:/Users/HP/OneDrive/Bureau/Bankin1/src/GUI/AdminController.java</file>
-            <file>file:/C:/Users/HP/OneDrive/Bureau/Bankin1/src/Entities/Pret.java</file>
             <file>file:/C:/Users/HP/OneDrive/Bureau/Bankin1/src/Services/EtatpretServices.java</file>
             <file>file:/C:/Users/HP/OneDrive/Bureau/Bankin1/src/Bank_in.java</file>
-            <file>file:/C:/Users/HP/OneDrive/Bureau/Bankin1/src/Entities/Etatpret.java</file>
+            <file>file:/C:/Users/HP/OneDrive/Bureau/Bankin1/src/GUI/Ajouterpret.fxml</file>
             <file>file:/C:/Users/HP/OneDrive/Bureau/Bankin1/src/Services/PretServices.java</file>
             <file>file:/C:/Users/HP/OneDrive/Bureau/Bankin1/src/GUI/AjouterpretController.java</file>
             <file>file:/C:/Users/HP/OneDrive/Bureau/Bankin1/src/GUI/Admin.fxml</file>
+            <file>file:/C:/Users/HP/OneDrive/Bureau/Bankin1/src/GUI/FXML.fxml</file>
             <file>file:/C:/Users/HP/OneDrive/Bureau/Bankin1/src/Interfaces/IEtatpret.java</file>
         </group>
     </open-files>

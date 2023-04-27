@@ -32,13 +32,7 @@ public class AjouterpretController implements Initializable {
     double montant,revenu,taux;
     Date debut;
     int duree;
-    private boolean isvalid(String poste) {
-		// String phonenumberstr = Integer.toString(num);
-		if (poste.length() <= 3) {
-			return false;
-		}
-        return true;
-    }
+  
     public static boolean isDateValid(Date date, String format) {
     SimpleDateFormat dateFormat = new SimpleDateFormat(format);
     dateFormat.setLenient(false);
@@ -108,6 +102,15 @@ public class AjouterpretController implements Initializable {
     alert.showAndWait();
     return;
     }
+     if (txtraison.getText().length() < 5) {
+     test=false;
+    Alert alert = new Alert(Alert.AlertType.ERROR);
+    alert.setTitle("Erreur de saisie");
+    alert.setHeaderText(null);
+    alert.setContentText("La raison doit avoir au moins 5 caractères !");
+    alert.showAndWait();
+    return;
+    }
     
      /*if (!isDateValid(debut, "dd/MM/yyyy")) {
      test=false;
@@ -135,7 +138,49 @@ public class AjouterpretController implements Initializable {
     //test=false;
     return;
     }
+    if (!txtrevenu.getText().matches("^\\d+(\\.\\d+)?$")) {
+        test=false;
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Erreur de saisie");
+        alert.setHeaderText(null);
+        alert.setContentText("Le revenu doit être un nombre décimal positif !");
+        alert.showAndWait();
+        return;
+    }
     
+
+    
+    double revenu = Double.parseDouble(txtrevenu.getText());
+    if (revenu < 500) {
+        test=false;
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Erreur de saisie");
+        alert.setHeaderText(null);
+        alert.setContentText("Le revenu doit être supérieur ou égal à 500 !");
+        alert.showAndWait();
+        return;
+    }
+      double taux = Double.parseDouble(txt_taux.getText());
+    if(taux < 0 || taux > 100){
+        test=false;
+    Alert alert = new Alert(Alert.AlertType.ERROR);
+    alert.setTitle("Erreur de saisie");
+    alert.setHeaderText(null);
+    alert.setContentText("Le taux doit être compris entre 0 et 100% !");
+    alert.showAndWait();
+    return;
+}
+    /* int duree = Integer.parseInt(txtduree.getText());
+    if (duree > 12) {
+        test=false;
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Erreur de saisie");
+        alert.setHeaderText(null);
+        alert.setContentText("La duree doit être supérieur 12 mois !");
+        alert.showAndWait();
+        return;
+    }
+    */
     
     
    if(test==true){ 

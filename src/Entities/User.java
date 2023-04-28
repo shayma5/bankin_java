@@ -25,6 +25,7 @@ public class User {
     private String password;
     private int isbanned;
     private String reset_token;
+    private Date created_at;
     
     
 
@@ -193,6 +194,16 @@ public class User {
     public void setReset_token(String reset_token) {
         this.reset_token = reset_token;
     }
+
+    public Date getCreated_at() {
+        return created_at;
+    }
+
+    public void setCreated_at(Date created_at) {
+        this.created_at = created_at;
+    }
+    
+    
     
     
 

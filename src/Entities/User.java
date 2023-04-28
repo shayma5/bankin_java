@@ -15,20 +15,24 @@ import java.sql.Date;
  * @author shayma
  */
 public class User {
-    private int id;
+    private Integer id;
     private String nom;
     private String prenom;
     private String telephone;
     private String image;
-    private Role role;
+    private String roles;
     private String email;
     private String password;
+    private int isbanned;
+    private String reset_token;
+    
+    
 
 
     
     
 
-    public User(int id, String nom, String prenom, String image, String email, String password) {
+    public User(Integer id, String nom, String prenom, String image, String email, String password) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -45,6 +49,14 @@ public class User {
         this.prenom = prenom;
         this.telephone = telephone;
     }
+    
+    public User(Integer id, String nom, String prenom,String email, String telephone) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.telephone = telephone;
+    }
 
     public User(String image) {
         this.image = image;
@@ -53,32 +65,59 @@ public class User {
    
     
     
-    public User(String nom, String prenom, String telephone, String email) {
+    public User(String nom, String prenom, String telephone, String email, String roles, int isbanned) {
         this.nom = nom;
         this.prenom = prenom;
         this.telephone = telephone;
         this.email = email;
+        this.roles = roles;
+        this.isbanned = isbanned;
     }
 
-  
-    public User(String nom, String prenom, String email, String telephone, String image) {
+    /**
+     *
+     * @param nom
+     * @param prenom
+     * @param email
+     * @param telephone
+     * @param image
+     * @param roles
+     * @param isbanned
+     */
+    public User(String nom, String prenom, String email, String telephone, String image, String roles, int isbanned) {
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
         this.telephone = telephone;
         this.image = image;
+        this.roles = roles;
+        this.isbanned = isbanned;
 
     }
     
+    public User(String nom, String prenom, String email, String telephone, String password, boolean dummy) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.telephone = telephone;
+        this.password = password;
 
+    }
+
+    public User(Integer id) {
+        this.id = id;
+    }
+
+    
+    
     
 
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -131,20 +170,40 @@ public class User {
         this.telephone = telephone;
     }
 
-    public Role getRole() {
-        return role;
+    public String getRoles() {
+        return roles;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
+    public void setRoles(String roles) {
+        this.roles = roles;
+    }
+
+    public int getIsbanned() {
+        return isbanned;
+    }
+
+    public void setIsbanned(int isbanned) {
+        this.isbanned = isbanned;
+    }
+
+    public String getReset_token() {
+        return reset_token;
+    }
+
+    public void setReset_token(String reset_token) {
+        this.reset_token = reset_token;
     }
     
-   
+    
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", nom=" + nom +", prenom=" + prenom + ", adresse=" + email + ", photoDeProfil=" + image + '}';
+        return "User{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", telephone=" + telephone + ", image=" + image + ", roles=" + roles + ", email=" + email + ", password=" + password + ", isbanned=" + isbanned + '}';
     }
+    
+    
+    
+   
     
 
     

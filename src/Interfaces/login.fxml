@@ -34,7 +34,8 @@
                   <PasswordField fx:id="password" layoutX="40.0" layoutY="185.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" styleClass="textfield" stylesheets="@loginfxml.css" />
                   <Button fx:id="loginBtn" layoutX="40.0" layoutY="238.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" stylesheets="@loginfxml.css" text="Login" />
                   <Button fx:id="register" layoutX="186.0" layoutY="297.0" mnemonicParsing="false" onMouseClicked="#register" text="register" />
-                  <Label layoutX="41.0" layoutY="301.0" prefHeight="18.0" prefWidth="142.0" text="don't have an account?" underline="true" />
+                  <Label layoutX="22.0" layoutY="301.0" prefHeight="18.0" prefWidth="161.0" text="don't have an account?" underline="true" />
+                  <Label fx:id="frgpass" layoutX="78.0" layoutY="334.0" onMouseClicked="#frgpass" text="forget password?" />
                </children>
             </AnchorPane>
          </children>

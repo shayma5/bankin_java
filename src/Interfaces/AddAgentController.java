@@ -4,9 +4,9 @@
  */
 package Interfaces;
 
-import Entities.Role;
 import Entities.User;
 import Services.ServiceUser;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -20,6 +20,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.effect.InnerShadow;
@@ -34,14 +35,28 @@ import javafx.stage.Window;
  *
  * @author shayma
  */
-public class RegisterController implements Initializable {
-ServiceUser userService = new ServiceUser();
+public class AddAgentController implements Initializable {
+    ServiceUser userService = new ServiceUser();
+
+
     @FXML
     private AnchorPane main_form;
     @FXML
-    private PasswordField password;
+    private Label username;
+    @FXML
+    private Button home_btn;
+    @FXML
+    private Button add_agent_btn;
+    @FXML
+    private Button salary_btn;
+    @FXML
+    private FontAwesomeIcon logout;
+    @FXML
+    private AnchorPane salary_form;
     @FXML
     private TextField email;
+    @FXML
+    private PasswordField password;
     @FXML
     private Button register;
     @FXML
@@ -50,8 +65,6 @@ ServiceUser userService = new ServiceUser();
     private TextField nom;
     @FXML
     private TextField telephone;
-    @FXML
-    private Button login;
 
     /**
      * Initializes the controller class.
@@ -62,6 +75,10 @@ ServiceUser userService = new ServiceUser();
     }    
 
     @FXML
+    private void logout(ActionEvent event) {
+    }
+
+    @FXML
     private void register(MouseEvent event) throws IOException {
                 if (validateString(nom) & validateString(prenom) & validateEmail(email)
                 & validatePassword(password)) {
@@ -69,8 +86,8 @@ ServiceUser userService = new ServiceUser();
         
              Window owner = register.getScene().getWindow();                
              User user = new User(nom.getText(), prenom.getText(), telephone.getText(), email.getText(), password.getText(), true);           
-                userService.register(user);
-                Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+                userService.AddAgent(user);
+                Parent root = FXMLLoader.load(getClass().getResource("AdminDashbord.fxml"));
                     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
@@ -129,12 +146,39 @@ ServiceUser userService = new ServiceUser();
     }
 
     @FXML
-    private void login(MouseEvent event) throws IOException {  Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    private void home(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("AdminHome.fxml"));
+     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
      Scene scene = new Scene(root);
      stage.setScene(scene);
      stage.show();
     }
 
+    @FXML
+    private void addagent(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("AddAgent.fxml"));
+     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+     Scene scene = new Scene(root);
+     stage.setScene(scene);
+     stage.show();
+    }
+
+    @FXML
+    private void showusers(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("AdminDashbord.fxml"));
+     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+     Scene scene = new Scene(root);
+     stage.setScene(scene);
+     stage.show();
+    }
+
+    @FXML
+    private void showclients(MouseEvent event) throws IOException {
+     Parent root = FXMLLoader.load(getClass().getResource("AdminShowClients.fxml"));
+     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+     Scene scene = new Scene(root);
+     stage.setScene(scene);
+     stage.show();
+    }
     
 }

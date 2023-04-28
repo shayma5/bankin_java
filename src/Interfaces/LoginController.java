@@ -21,6 +21,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.effect.InnerShadow;
@@ -36,7 +37,6 @@ import javafx.stage.Stage;
  */
 public class LoginController implements Initializable {
 
-
     @FXML
     private TextField email;
 
@@ -51,6 +51,8 @@ public class LoginController implements Initializable {
 
     @FXML
     private Button register;
+    @FXML
+    private Label frgpass;
 
     /**
      * Initializes the controller class.
@@ -58,10 +60,9 @@ public class LoginController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
-    
-            private boolean validateEmail(TextField email) {
+    private boolean validateEmail(TextField email) {
 
         Pattern p = Pattern.compile("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
         Matcher m = p.matcher(email.getText());
@@ -78,7 +79,8 @@ public class LoginController implements Initializable {
         }
 
     }
-      private boolean validatePassword(TextField password) {
+
+    private boolean validatePassword(TextField password) {
 
         Pattern p = Pattern.compile("[a-zA-Z_0-9]+");
         Matcher m = p.matcher(password.getText());
@@ -94,36 +96,63 @@ public class LoginController implements Initializable {
             return false;
         }
 
-    }   
+    }
 
     @FXML
     private void register(MouseEvent event) throws IOException {
-         Parent root = FXMLLoader.load(getClass().getResource("register.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("register.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-     Scene scene = new Scene(root);
-     stage.setScene(scene);
-     stage.show();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
     private void login(MouseEvent event) throws IOException {
-                        if (event.getSource() == loginBtn) 
-        {
-            if (validateEmail(email) & validatePassword(password)){
-                User user = ServiceUser.login( email.getText(), password.getText());
-                ServiceUser.userSession = new UserSession();            
+        if (event.getSource() == loginBtn) {
+            if (validateEmail(email) & validatePassword(password)) {
+                String roles = null;
+                User user = ServiceUser.login(email.getText(), password.getText());
+                ServiceUser.userSession = new UserSession();
                 ServiceUser.userSession.setUserEmail(user.getEmail());
-                             
+
+                System.out.println(user.getRoles());
                 System.out.println(user.getTelephone());
-                Parent root = FXMLLoader.load(getClass().getResource("profile.fxml"));
-                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
-        }
+                System.out.println(user.getIsbanned());
+                if ("[\"ROLE_USER\"]".equals(user.getRoles())) {
+
+                    if (1 == user.getIsbanned()) {
+                        Parent root2 = FXMLLoader.load(getClass().getResource("banned.fxml"));
+                        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                        Scene scene = new Scene(root2);
+                        stage.setScene(scene);
+                        stage.show();
+                    } else {
+                        Parent root2 = FXMLLoader.load(getClass().getResource("profile.fxml"));
+                        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                        Scene scene = new Scene(root2);
+                        stage.setScene(scene);
+                        stage.show();
+                    }
+
+                } else if ("[\"ROLE_ADMIN\"]".equals(user.getRoles())) {
+                    Parent root = FXMLLoader.load(getClass().getResource("AdminHome.fxml"));
+                    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    Scene scene = new Scene(root);
+                    stage.setScene(scene);
+                    stage.show();
+                }
+            }
         }
     }
 
-
+    @FXML
+    private void frgpass(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("forgetpass.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
 }

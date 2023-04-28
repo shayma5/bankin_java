@@ -107,13 +107,6 @@ public class UpdateController implements Initializable {
         telephone.setText(userSession.getUser().getTelephone()); 
     }    
 
-    @FXML
-    private void close(ActionEvent event) {
-    }
-
-    @FXML
-    private void minimize(ActionEvent event) {
-    }
 
     @FXML
     private void update(MouseEvent event) throws IOException {

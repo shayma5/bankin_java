@@ -27,16 +27,6 @@
                                     <Font name="Segoe UI Black" size="13.0" />
                                  </font>
                               </Label>
-                              <Button layoutX="1039.999999999999" layoutY="13.200000000000001" mnemonicParsing="false" onAction="#close" styleClass="close" stylesheets="@dashbord.css" AnchorPane.rightAnchor="5.200000000000728" AnchorPane.topAnchor="13.200000000000001">
-                                 <graphic>
-                                    <FontAwesomeIcon glyphName="CLOSE" textAlignment="CENTER" wrappingWidth="35.828594982624054" />
-                                 </graphic>
-                              </Button>
-                              <Button layoutX="1013.3999999999991" layoutY="13.200000000000001" mnemonicParsing="false" onAction="#minimize" styleClass="minimize" stylesheets="@dashbord.css" AnchorPane.rightAnchor="58.20000000000073" AnchorPane.topAnchor="13.200000000000001">
-                                 <graphic>
-                                    <FontAwesomeIcon glyphName="MINUS" />
-                                 </graphic>
-                              </Button>
                            </children>
                            <styleClass>
                               <String fx:value="top-form" />

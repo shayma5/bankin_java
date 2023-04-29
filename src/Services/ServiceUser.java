@@ -12,6 +12,7 @@ import java.sql.Statement;
 import java.time.LocalDate;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javax.mail.MessagingException;
 import org.mindrot.jbcrypt.BCrypt;
 
 public class ServiceUser {
@@ -23,7 +24,7 @@ public class ServiceUser {
         cnx = MyConnection.getInstance().getConnection();
     }
 
-    public boolean register(User user) {
+    public boolean register(User user) throws MessagingException {
         String roleType1 = "";
         roleType1 = "[\"ROLE_USER\"]";
         String ban ="0";
@@ -42,9 +43,11 @@ public class ServiceUser {
             pst.setString(3, user.getTelephone());
             pst.setString(7, String.valueOf(currentDate));
             pst.setString(8, String.valueOf(ban));
-
+            String send = user.getTelephone();
             if (pst.executeUpdate() > 0) {
                 System.out.println("You have registered successfully.");
+                System.out.println(send);
+                EnvoiyerEmail.envoyer(send);
                 return true;
             } else {
                 System.out.println("Something went wrong.");
@@ -168,9 +171,10 @@ public class ServiceUser {
     public boolean AddAgent(User user) {
         String roleType2 = "";
         roleType2 = "[\"ROLE_AGENT\"]";
+        LocalDate currentDate = LocalDate.now();
 
         try {
-            String requete = "insert into user (nom,prenom,email,password,roles,telephone)values (?,?,?,?,?,?)";
+            String requete = "insert into user (nom,prenom,email,password,roles,telephone,created_at)values (?,?,?,?,?,?,?)";
             PreparedStatement pst = MyConnection.getInstance().getConnection().prepareStatement(requete);
             pst.setString(1, user.getNom());
             pst.setString(2, user.getPrenom());
@@ -178,6 +182,7 @@ public class ServiceUser {
             pst.setString(4, BCrypt.hashpw(user.getPassword(), BCrypt.gensalt()));
             pst.setString(5, roleType2);
             pst.setString(3, user.getTelephone());
+            pst.setString(7, String.valueOf(currentDate));
 
             if (pst.executeUpdate() > 0) {
                 System.out.println("You have registered successfully.");

@@ -3,13 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/GUI/AdminController.java</file>
-            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/Services/AbonnementServices.java</file>
-            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/GUI/Admin.fxml</file>
-            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/ConnectionDB/MyConnection.java</file>
-            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/GUI/Chart.fxml</file>
-            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/Bankinfx.java</file>
-            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/GUI/ChartController.java</file>
+            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/GUI/AccountCrudController.java</file>
+            <file>file:/C:/Users/Koussay/OneDrive/Documents/NetBeansProjects/Bankin/src/GUI/AdminAbonnementController.java</file>
         </group>
     </open-files>
 </project-private>

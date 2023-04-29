@@ -26,6 +26,7 @@
                      <VBox.margin>
                         <Insets top="300.0" />
                      </VBox.margin></Button>
+                  <Button fx:id="retourner" layoutX="10.0" layoutY="372.0" mnemonicParsing="false" onAction="#retourner" prefHeight="26.0" prefWidth="144.0" text="Retourner" />
                </children>
             </VBox>
             <AnchorPane fx:id="chartNode" prefHeight="414.0" prefWidth="498.0" />

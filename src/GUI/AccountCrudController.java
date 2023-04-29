@@ -28,7 +28,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import Utils.ListSexe;
+import com.itextpdf.text.Image;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.Random;
 import javafx.scene.chart.BarChart;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -38,6 +45,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.util.StringConverter;
+
 
 /**
  * FXML Controller class
@@ -76,38 +84,41 @@ public class AccountCrudController implements Initializable {
     private Button btn_importer;
     @FXML
     private Button btn_ajouter;
-    @FXML
-    private AnchorPane addEmployee_form;
-    @FXML
-    private TextField addEmployee_employeeID;
-    @FXML
-    private TextField addEmployee_firstName;
-    @FXML
-    private TextField addEmployee_lastName;
-    @FXML
-    private TextField addEmployee_phoneNum;
-    @FXML
-    private ImageView addEmployee_image;
-    @FXML
-    private AnchorPane salary_form;
-    @FXML
-    private TextField salary_employeeID;
-    @FXML
-    private Label salary_firstName;
-    @FXML
-    private Label salary_lastName;
-    @FXML
-    private Label salary_position;
-    @FXML
-    private TextField salary_salary;
+    @FXML 
+    private ImageView image;
    
    
       
 
     @FXML
     private void ajouter(ActionEvent event) {
+        boolean test = true;
+        if (txtnom.getText().isEmpty() || txtnum.getText().isEmpty() || txtmail.getText().isEmpty()
+				|| txtdate.getText().isEmpty() || txtad.getText().isEmpty() || txtville.getText().isEmpty()
+				|| txtcin.getText().isEmpty() || txtsolde.getText().isEmpty()) {
+			{
+				test=false;
+				Alert alert1 = new Alert(Alert.AlertType.WARNING);
+				alert1.setTitle("oops");
+				alert1.setHeaderText(null);
+				alert1.setContentText("remplir tous les champs");
+				alert1.showAndWait();
+				return;
+
+			}
+		}
             
-            
+                        int Solde = Integer.parseInt(txtsolde.getText());
+
+    if(Solde < 0 || Solde > 1000000000){
+        test=false;
+    Alert alert = new Alert(Alert.AlertType.ERROR);
+    alert.setTitle("Erreur de saisie");
+    alert.setHeaderText(null);
+    alert.setContentText("Le solde doit être compris entre 0 et un entier positif");
+    alert.showAndWait();
+    return;
+}
             String NomComplet = txtnom.getText();
             int  NumTel = Integer.parseInt(txtnum.getText());
             String Email = txtmail.getText();
@@ -115,12 +126,10 @@ public class AccountCrudController implements Initializable {
             String Adresse = txtad.getText();
             String Ville = txtville.getText();
             String brochure_filename = txtcin.getText();
-            int Solde = Integer.parseInt(txtsolde.getText());
             
     
-    
-
-			Account nouveauAccount = new Account();
+    if(test==true){ 
+    Account nouveauAccount = new Account();
 			nouveauAccount.setNomComplet(txtnom.getText());
 			String[] split_list = txtcin.getText().split("\\\\");
 			String image = "" + split_list[split_list.length - 1];
@@ -141,6 +150,11 @@ public class AccountCrudController implements Initializable {
 			alert2.setContentText("A new account was inserted successfully!");
 
 			Optional<ButtonType> result = alert2.showAndWait();
+    
+   
+   }
+
+			
 			 
 		}
         
@@ -153,7 +167,7 @@ public class AccountCrudController implements Initializable {
             public String toString(Sexe object) {
                 if (object.getNom() != null) {
                     return object.getNom();
-                } else return "";
+                }else return "";
             }
 
             @Override
@@ -168,7 +182,7 @@ public class AccountCrudController implements Initializable {
 
 
     @FXML
-    private void impoter(ActionEvent event) {
+    private void importer(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Sélectionnez un fichier PNG");
         fileChooser.getExtensionFilters().addAll(
@@ -180,7 +194,7 @@ public class AccountCrudController implements Initializable {
             file = fichierSelectionne;
         }
     }
-
+    
 
     
 }    

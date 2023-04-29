@@ -27,6 +27,10 @@ import javafx.scene.control.TextInputDialog;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.util.Duration;
+import tray.animations.AnimationType;
+import tray.notification.NotificationType;
+import tray.notification.TrayNotification;
 
 /**
  * FXML Controller class
@@ -117,6 +121,14 @@ resultPrix.ifPresent(nouveauPrix -> {
 as.modifierAbonnement(selectedAbonnement);
 
 Alert alert = new Alert(Alert.AlertType.INFORMATION);
+AnimationType type = AnimationType.POPUP;
+                                TrayNotification tray = new TrayNotification();
+
+                        tray.setAnimationType(type);
+        tray.setTitle("Notification");
+        tray.setMessage("l'abonnement "+selectedAbonnement+"a été modifié avec succés !");
+        tray.setNotificationType(NotificationType.INFORMATION);
+        tray.showAndDismiss(Duration.millis(6000));
 alert.setContentText("Abonnement modifié !");
 alert.showAndWait();
 

@@ -87,10 +87,10 @@
                                           <Label layoutX="169.0" layoutY="133.0" text="email" />
                                           <Label layoutX="141.0" layoutY="82.0" text="Num_telephone" />
                                           <ComboBox fx:id="Sx" layoutX="267.0" layoutY="179.0" prefWidth="150.0" />
-                                          <Button fx:id="btn_importer" layoutX="429.0" layoutY="443.0" mnemonicParsing="false" onAction="#impoter" prefHeight="16.0" prefWidth="78.0" styleClass="add-btn" stylesheets="@../../../../../../Downloads/Pidev/Pidev/src/gui/dashboardDesign.css" text="Importer" />
+                                          <Button layoutX="429.0" layoutY="395.0" mnemonicParsing="false" onAction="#importer" prefHeight="16.0" prefWidth="78.0" styleClass="add-btn" stylesheets="@../../../../../../Downloads/Pidev/Pidev/src/gui/dashboardDesign.css" text="Importer" />
                                           <TextField fx:id="txtsolde" layoutX="268.0" layoutY="443.0" />
                                           <Label layoutX="154.0" layoutY="447.0" prefHeight="17.0" prefWidth="36.0" text="Solde" />
-                                          <Button fx:id="btn_ajouter" layoutX="583.0" layoutY="493.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="51.0" prefWidth="110.0" styleClass="update-btn" stylesheets="@../../../../../../Downloads/Pidev/Pidev/src/gui/dashboardDesign.css" text="Ajouter" />
+                                          <Button fx:id="btn_ajouter" layoutX="195.0" layoutY="500.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="51.0" prefWidth="305.0" styleClass="update-btn" stylesheets="@../../../../../../Downloads/Pidev/Pidev/src/gui/dashboardDesign.css" text="Ajouter" />
                                        </children>
                                     </AnchorPane>
                                  </children>

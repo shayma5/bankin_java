@@ -14,6 +14,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -103,5 +105,22 @@ public class AccountServices implements Interfaces.AccountInterface {
 		return listeB;
 
 	}
+        
 
+    public void modifierEtat(int etat ) {
+        try {
+			String sql = "UPDATE account set etat=? WHERE id=?";
+			PreparedStatement ste = myConn.prepareStatement(sql);
+			ste.setInt(1,etat);
+                        ste.setInt(2,47);
+			int rowsUpdated = ste.executeUpdate();
+			if (rowsUpdated > 0) {
+				System.out.println("changed");
+			}
+		} catch (SQLException ex) {
+			System.out.println(ex);
+		}
+    }
 }
+
+

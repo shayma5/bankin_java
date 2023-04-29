@@ -20,11 +20,11 @@ public class Bankinfx extends Application {
         try {
             Bankinfx.stg = primaryStage;
            
-         //   FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/AccountCrud.fxml"));
-              FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/Admin.fxml"));
-            //FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/AdminAbonnement.fxml"));
-            //FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/DashbordAbonnement.fxml"));
-                //FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/chart.fxml"));
+         // FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/AccountCrud.fxml"));
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/Admin.fxml"));
+          //  FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/AdminAbonnement.fxml"));
+         //  FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/DashbordAbonnement.fxml"));
+              //  FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/chart.fxml"));
 
             
             

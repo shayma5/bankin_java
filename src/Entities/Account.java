@@ -3,9 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Entities;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 /**
  *
  * @author Koussay
@@ -25,6 +22,7 @@ public class Account {
     private String Ville;
     private String brochure_filename ;
     private int Solde;
+    private int etat;
 
     public Account(int id_a, String NomComplet, int NumTel, String email, String Sexe, String DateNaiss, String Adresse, String Ville, String brochure_filename	, int Solde) {
         this.id_a = id_a;
@@ -88,6 +86,14 @@ public class Account {
         this.Adresse = Adresse;
     }
 
+    public int getEtat() {
+        return etat;
+    }
+
+    public void setEtat(int etat) {
+        this.etat = etat;
+    }
+
     public void setVille(String Ville) {
         this.Ville = Ville;
     }
@@ -138,6 +144,10 @@ public class Account {
 
     public String getBrochure_filename() {
         return brochure_filename;
+    }
+
+    public void setId_a(int id_a) {
+        this.id_a = id_a;
     }
 
 

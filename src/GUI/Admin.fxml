@@ -11,6 +11,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
@@ -35,12 +36,14 @@
                                  </font>
                               </Label>
                               <Line endX="69.0" layoutX="121.0" layoutY="282.0" startX="-100.0" stroke="WHITE" />
-                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="6.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="76.0" fitWidth="200.0" layoutX="115.0" layoutY="511.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../Images/325149874_1139825106730136_6541065043253681926_n.png" />
                                  </image>
                               </ImageView>
-                              <Button fx:id="btn_importer1" layoutX="-3.0" layoutY="307.0" mnemonicParsing="false" onAction="#Stat" prefHeight="51.0" prefWidth="221.0" styleClass="add-btn" stylesheets="@../../../../../../Downloads/Pidev/Pidev/src/gui/dashboardDesign.css" text="Statistique" />
+                              <Button fx:id="btn_importer1" layoutX="-3.0" layoutY="307.0" mnemonicParsing="false" onAction="#Stat" prefHeight="52.0" prefWidth="221.0" styleClass="add-btn" stylesheets="@../../../../../../Downloads/Pidev/Pidev/src/gui/dashboardDesign.css" text="Statistique" />
+                              <Button fx:id="excelButt" layoutX="-3.0" layoutY="370.0" mnemonicParsing="false" onAction="#Excel" prefHeight="51.0" prefWidth="221.0" styleClass="add-btn" stylesheets="@../../../../../../Downloads/Pidev/Pidev/src/gui/dashboardDesign.css" text="Exporter accounts" />
+                              <Button fx:id="jouter_abonnement" layoutX="-1.0" layoutY="438.0" mnemonicParsing="false" onAction="#ajouter_abo" prefHeight="51.0" prefWidth="221.0" styleClass="add-btn" stylesheets="@../../../../../../Downloads/Pidev/Pidev/src/gui/dashboardDesign.css" text="Ajouter abonnement" />
                            </children>
                         </AnchorPane>
                         <Text fill="WHITE" layoutX="73.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin">
@@ -74,8 +77,22 @@
                                           <String fx:value="shadow" />
                                        </styleClass>
                                        <children>
-                                          <Button fx:id="btn_importer" layoutX="503.0" layoutY="452.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="110.0" styleClass="add-btn" stylesheets="@../../../../../../Downloads/Pidev/Pidev/src/gui/dashboardDesign.css" text="Refuser" />
-                                          <Button fx:id="btn_ajouter" layoutX="250.0" layoutY="453.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="110.0" styleClass="update-btn" stylesheets="@../../../../../../Downloads/Pidev/Pidev/src/gui/dashboardDesign.css" text="Accepter" />
+                                          <Button fx:id="btn_importer" layoutX="503.0" layoutY="452.0" mnemonicParsing="false" onAction="#refuser" prefHeight="51.0" prefWidth="110.0" styleClass="add-btn" stylesheets="@../../../../../../Downloads/Pidev/Pidev/src/gui/dashboardDesign.css" text="Refuser" />
+                                          <Button fx:id="btn_ajouter" layoutX="250.0" layoutY="453.0" mnemonicParsing="false" onAction="#accepter" prefHeight="51.0" prefWidth="110.0" styleClass="update-btn" stylesheets="@../../../../../../Downloads/Pidev/Pidev/src/gui/dashboardDesign.css" text="Accepter" />
+                                          <HBox layoutX="164.0" layoutY="20.0" prefHeight="65.0" prefWidth="504.0">
+                                             <children>
+                                                <TextField fx:id="filtree" prefHeight="65.0" prefWidth="225.0" text="Type here to search">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button fx:id="searchBut" mnemonicParsing="false" onAction="#rechercher" prefHeight="66.0" prefWidth="299.0" style="-fx-background-color: #159B7C;" text="Search">
+                                                   <font>
+                                                      <Font name="System Bold" size="28.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
                                        </children>
                                     </AnchorPane>
                                     <TableView fx:id="table_compte" layoutX="3.0" layoutY="84.0" prefHeight="307.0" prefWidth="857.0">

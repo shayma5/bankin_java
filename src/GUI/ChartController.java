@@ -28,8 +28,11 @@ import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Group;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.chart.CategoryAxis;
@@ -37,6 +40,7 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
@@ -60,6 +64,8 @@ public class ChartController implements Initializable {
     private HBox chartHBox;
     public static int numeroPDF = 0;
     Document doc = new Document();
+    @FXML
+    private Button retourner;
 
     
     @Override
@@ -248,6 +254,19 @@ return series;
 
         }
 
+    }
+
+    @FXML
+    private void retourner(ActionEvent event) {
+         try {
+            // Charger la nouvelle scène FXML
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Admin.fxml"));
+            Parent root = loader.load();
+            // Définir la nouvelle racine de la scène actuelle
+            ((Node) event.getSource()).getScene().setRoot(root);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     

@@ -63,6 +63,10 @@ public class AdminHomeController implements Initializable {
     private ResultSet result1;
     private ResultSet result2;
     private ResultSet result3;
+    @FXML
+    private Button add_ab;
+    @FXML
+    private Button show_ab;
 
     /**
      * Initializes the controller class.
@@ -211,6 +215,33 @@ public class AdminHomeController implements Initializable {
     @FXML
     private void showclients(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("AdminShowClients.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void add_ab(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("AdminAbonnement.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void show_ab(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("DashbordAbonnement.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void show_acc(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Admin.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

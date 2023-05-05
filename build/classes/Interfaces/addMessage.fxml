@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="807.0" prefWidth="1078.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.AddMessageController">
+   <children>
+      <AnchorPane layoutY="37.0" prefHeight="778.0" prefWidth="281.0" styleClass="nav-form" stylesheets="@dashboardDesign.css">
+         <children>
+            <Text fill="WHITE" layoutX="89.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manef">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="63.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue,">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Line endX="105.0" layoutX="120.0" layoutY="259.0" startX="-109.0" stroke="WHITE" strokeLineCap="BUTT" strokeLineJoin="BEVEL" />
+            <Button fx:id="msgbtn" layoutX="28.0" layoutY="342.0" mnemonicParsing="false" onAction="#goToMessages" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Messages" />
+            <Button fx:id="rdvbtn" layoutX="28.0" layoutY="379.0" mnemonicParsing="false" onAction="#goToRdv" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Rendez-Vous" />
+            <Button layoutX="20.0" layoutY="728.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="56.0" styleClass="update-btn" stylesheets="@dashboardDesign.css">
+               <graphic>
+               </graphic>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+            </Button>
+            <Label layoutX="86.0" layoutY="733.0" text="Logout" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="profile" layoutX="28.0" layoutY="306.0" mnemonicParsing="false" onMouseClicked="#profile" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="profile" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnclose" layoutX="1012.0" layoutY="3.0" mnemonicParsing="false" onAction="#close" prefHeight="26.0" prefWidth="56.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+         <graphic>
+         </graphic>
+      </Button>
+      <Button layoutX="982.0" layoutY="2.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="38.0">
+         <graphic>
+         </graphic>
+      </Button>
+      <AnchorPane layoutX="237.0" layoutY="37.0" prefHeight="778.0" prefWidth="839.0" stylesheets="@dashboardDesign.css">
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <AnchorPane layoutX="7.0" layoutY="8.0" prefHeight="413.0" prefWidth="825.0" stylesheets="@dashboardDesign.css">
+               <styleClass>
+                  <String fx:value="white-bg" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <TableView fx:id="messagetable" layoutX="33.0" layoutY="74.0" prefHeight="307.0" prefWidth="759.0">
+                    <columns>
+                      <TableColumn fx:id="idcol" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="nomcol" prefWidth="142.0" text="Nom" />
+                        <TableColumn fx:id="prenomcol" prefWidth="142.0" text="Prénom" />
+                        <TableColumn fx:id="datecol" prefWidth="146.0" text="Date" />
+                        <TableColumn fx:id="descriptioncol" prefWidth="253.0" text="Description" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="_search" layoutX="33.0" layoutY="25.0" onAction="#chhhhh" onKeyReleased="#cchhherr" prefHeight="30.0" prefWidth="294.0" promptText="Search" />
+                  <Button fx:id="btnplay" layoutX="740.0" layoutY="18.0" mnemonicParsing="false" onAction="#playMusic" prefHeight="26.0" prefWidth="58.0" text="Play" />
+                  <Button fx:id="btnpause" layoutX="681.0" layoutY="18.0" mnemonicParsing="false" onAction="#pauseMusic" prefHeight="26.0" prefWidth="58.0" text="Pause" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="74.0" layoutY="485.0" text="Nom :">
+               <font>
+                  <Font name="Tahoma" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="72.0" layoutY="524.0" text="Prénom :">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="76.0" layoutY="564.0" text="Date :">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="420.0" layoutY="483.0" text="Description :">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nomtxt" layoutX="193.0" layoutY="483.0" />
+            <TextField fx:id="prenomtxt" layoutX="193.0" layoutY="525.0" />
+            <DatePicker fx:id="datep" layoutX="193.0" layoutY="565.0" />
+            <TextArea fx:id="descriptiontxt" layoutX="524.0" layoutY="482.0" prefHeight="136.0" prefWidth="264.0" />
+            <Button fx:id="btndel" layoutX="669.0" layoutY="679.0" mnemonicParsing="false" onAction="#Supprimer" prefHeight="51.0" prefWidth="110.0" styleClass="delete-btn" stylesheets="@dashboardDesign.css" text="Supprimer" />
+            <Button fx:id="btnadd" layoutX="373.0" layoutY="679.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="51.0" prefWidth="110.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Ajouter" />
+            <Button fx:id="btnup" layoutX="524.0" layoutY="679.0" mnemonicParsing="false" onAction="#Modifier" prefHeight="51.0" prefWidth="110.0" styleClass="update-btn" stylesheets="@dashboardDesign.css" text="Modifier" />
+            <Button layoutX="715.0" layoutY="432.0" mnemonicParsing="false" onAction="#pdfEvent" styleClass="import-btn" stylesheets="@dashboardDesign.css" text="Générer PDF" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="43.0" layoutY="6.0" text="Bank-In">
+         <font>
+            <Font name="Tahoma" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

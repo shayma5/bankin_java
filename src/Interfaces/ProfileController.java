@@ -44,8 +44,16 @@ public class ProfileController implements Initializable {
     private Label nomdash;
     @FXML
     private Label prenomdash;
-    
-               public List<File> findAllFilesInFolder(File folder) {
+    @FXML
+    private Button vir_btn;
+    @FXML
+    private Button contact;
+    @FXML
+    private Button bud;
+    @FXML
+    private Button compte;
+
+    public List<File> findAllFilesInFolder(File folder) {
         List<File> list = new ArrayList<>();
         for (File file : folder.listFiles()) {
             if (!file.isDirectory()) {
@@ -69,9 +77,9 @@ public class ProfileController implements Initializable {
     private AnchorPane home_form;
     @FXML
     private Label nom;
-    
-    File file; 
-    
+
+    File file;
+
     @FXML
     private Label telephone;
     @FXML
@@ -86,9 +94,9 @@ public class ProfileController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-          UserSession userSession = new UserSession();
-          ServiceUser userService = new ServiceUser();
-            File folder = new File("C:\\xampp\\htdocs\\uploads\\images");
+        UserSession userSession = new UserSession();
+        ServiceUser userService = new ServiceUser();
+        File folder = new File("C:\\xampp\\htdocs\\uploads\\images");
         Circle cir2 = new Circle(250, 250, 100);
         for (int i = 0; i < findAllFilesInFolder(folder).size(); i++) {
             if (findAllFilesInFolder(folder).get(i).getName().equals(userSession.getUser().getImage())) {
@@ -101,44 +109,77 @@ public class ProfileController implements Initializable {
                 }
             }
         }
-          
+
         nom.setText(userSession.getUser().getNom());
         nomdash.setText(userSession.getUser().getNom());
         prenom.setText(userSession.getUser().getPrenom());
         prenomdash.setText(userSession.getUser().getPrenom());
-        email.setText(userSession.getUser().getEmail()); 
-        telephone.setText(userSession.getUser().getTelephone()); 
-        
-       
-    }    
+        email.setText(userSession.getUser().getEmail());
+        telephone.setText(userSession.getUser().getTelephone());
 
-
-    
+    }
 
     @FXML
     private void logout(MouseEvent event) throws IOException {
-     Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
-     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-     Scene scene = new Scene(root);
-     stage.setScene(scene);
-     stage.show();
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
     private void gererprofile(MouseEvent event) throws IOException {
-     Parent root = FXMLLoader.load(getClass().getResource("update.fxml"));
-     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-     Scene scene = new Scene(root);
-     stage.setScene(scene);
-     stage.show();
+        Parent root = FXMLLoader.load(getClass().getResource("update.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
+    @FXML
+    private void vir_btn(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Ajouter.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
+    @FXML
+    private void profile(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("profile.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
+    @FXML
+    private void contact(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("addMessage.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
+    @FXML
+    private void bud(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("budgetinterface.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
+    @FXML
+    private void compte(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("AccountCrud.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
-
-
-    
 }

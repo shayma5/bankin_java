@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="btt" prefHeight="603.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.AjouterBController">
+   <children>
+      <Label layoutX="39.0" layoutY="73.0" text="Rib Beneficiare" />
+      <Label layoutX="336.0" layoutY="73.0" prefHeight="18.0" prefWidth="110.0" text="Prenom Beneficiaire" />
+      <Label layoutX="33.0" layoutY="131.0" prefHeight="18.0" prefWidth="89.0" text="Nom Beneficiare" />
+      <Button fx:id="ba" layoutX="629.0" layoutY="302.0" mnemonicParsing="false" onAction="#saveBen" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: green;" text="Ajouter" />
+      <Label layoutX="340.0" layoutY="131.0" prefHeight="18.0" prefWidth="110.0" text="Email Beneficiaire" />
+     
+      <ListView fx:id="listb" layoutX="46.0" layoutY="315.0" onMouseClicked="#afficherQR" prefHeight="200.0" prefWidth="499.0" />
+      <Button fx:id="bm" layoutX="629.0" layoutY="359.0" mnemonicParsing="false" onAction="#modifierr" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: green;" text="Modifier">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></Button>
+      <Button fx:id="bs" layoutX="629.0" layoutY="415.0" mnemonicParsing="false" onAction="#supprimerr" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: red;" text="Supprimer" />
+      <Button layoutX="451.0" layoutY="277.0" mnemonicParsing="false" onAction="#refreshh" prefHeight="26.0" prefWidth="90.0" text="Refresh" />
+      <TextField fx:id="prenom_benef" layoutX="451.0" layoutY="71.0" />
+      <TextField fx:id="rib_benef" layoutX="137.0" layoutY="69.0" />
+      <TextField fx:id="nom_benef" layoutX="137.0" layoutY="128.0" />
+      <TextField fx:id="email_benef" layoutX="452.0" layoutY="128.0" />
+      <ImageView fx:id="qr_CODE" fitHeight="136.0" fitWidth="229.0" layoutX="37.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="_search" layoutX="233.0" layoutY="278.0" onKeyTyped="#seach" prefHeight="26.0" prefWidth="213.0" />
+      <Text fx:id="chyyyy" layoutX="67.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="187.73670959472656">
+         <font>
+            <Font size="60.0" />
+         </font>
+      </Text>
+      <Button layoutX="681.0" layoutY="14.0" mnemonicParsing="false" onAction="#Play" onMouseClicked="#zz" text="Play" />
+      <Button layoutX="613.0" layoutY="14.0" mnemonicParsing="false" onAction="#Pause" onMouseClicked="#zz" text="Pause" />
+      <Button fx:id="back" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#back" text="&lt;" />
+   </children>
+</AnchorPane>

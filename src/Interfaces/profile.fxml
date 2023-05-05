@@ -39,7 +39,7 @@
                <left>
                   <AnchorPane prefHeight="538.0" prefWidth="249.0" BorderPane.alignment="CENTER">
                      <children>
-                        <AnchorPane layoutX="14.0" layoutY="100.0" prefHeight="538.4" prefWidth="249.6" styleClass="nav-form" stylesheets="@dashbord.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane layoutY="32.0" prefHeight="538.4" prefWidth="249.6" styleClass="nav-form" stylesheets="@dashbord.css" AnchorPane.bottomAnchor="-32.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
                            <children>
                               <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="92.0" layoutY="88.0" size="7em" />
                               <Label layoutX="88.0" layoutY="111.0" text="Welcome," textFill="WHITE">
@@ -53,7 +53,7 @@
                                  </font>
                               </Label>
                               <Line endX="99.10000610351562" layoutX="127.0" layoutY="179.0" startX="-101.70001220703125" stroke="#c9c9c9" />
-                              <Button fx:id="home_btn" layoutX="44.0" layoutY="194.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashbord.css" text="profile">
+                              <Button fx:id="home_btn" layoutX="44.0" layoutY="194.0" mnemonicParsing="false" onMouseClicked="#profile" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashbord.css" text="profile">
                                  <graphic>
                                     <FontAwesomeIcon fill="WHITE" glyphName="USER" />
                                  </graphic>
@@ -73,6 +73,26 @@
                                     <Font name="Tahoma" size="17.0" />
                                  </font>
                               </Label>
+                              <Button fx:id="vir_btn" layoutX="44.0" layoutY="229.0" mnemonicParsing="false" onMouseClicked="#vir_btn" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashbord.css" text="virement">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="MONEY" text="" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="contact" layoutX="44.0" layoutY="264.0" mnemonicParsing="false" onMouseClicked="#contact" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashbord.css" text="contact">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="MESSAGE" text="" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="bud" layoutX="44.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#bud" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashbord.css" text="budget">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="MESSAGE" text="" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="compte" layoutX="44.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#compte" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashbord.css" text="creer un compte">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="MESSAGE" text="" />
+                                 </graphic>
+                              </Button>
                            </children>
                         </AnchorPane>
                      </children>

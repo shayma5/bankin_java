@@ -3,10 +3,26 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin/src/Interfaces/ResetPasswordController.java</file>
-            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin/src/Services/ServiceUser.java</file>
-            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin/src/Interfaces/LoginController.java</file>
-            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin/src/Entities/User.java</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Interfaces/addMessage.fxml</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Services/ServiceUser.java</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Interfaces/profile.fxml</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Services/IServiceBeneficiaire.java</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Interfaces/AjouterController.java</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Interfaces/ProfileController.java</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Services/BeneficiaireService.java</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Interfaces/Ajouter.fxml</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Interfaces/addRdv.fxml</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Entities/Rdv.java</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Services/VirementService.java</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/bankin/Bankin.java</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Interfaces/AddMessageController.java</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Entities/Message.java</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Entities/BadWords.java</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Entities/MailAPI.java</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Services/IServiceVirement.java</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Interfaces/AjouterB.fxml</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Interfaces/AjouterBController.java</file>
+            <file>file:/C:/Users/shayma/OneDrive/Documents/NetBeansProjects/Bankin%20-%20Copy/src/Interfaces/AddRdvController.java</file>
         </group>
     </open-files>
 </project-private>

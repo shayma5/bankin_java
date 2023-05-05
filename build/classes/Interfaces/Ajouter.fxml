@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="603.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.AjouterController">
+   <children>
+      <Label layoutX="33.0" layoutY="132.0" text="Date viirement" />
+      <Label layoutX="336.0" layoutY="73.0" prefHeight="18.0" prefWidth="110.0" text="Prenom Beneficiaire" />
+      <Label layoutX="34.0" layoutY="74.0" prefHeight="18.0" prefWidth="59.0" text="Montant" />
+      <Label layoutX="34.0" layoutY="190.0" prefHeight="18.0" prefWidth="89.0" text="Titre" />
+      <TextField fx:id="montant" layoutX="137.0" layoutY="70.0" />
+      <TextField fx:id="titre" layoutX="137.0" layoutY="187.0" />
+      <Button fx:id="ba" layoutX="629.0" layoutY="302.0" mnemonicParsing="false" onAction="#save" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: green;" text="Ajouter" textFill="WHITE" />
+      <Label layoutX="340.0" layoutY="190.0" prefHeight="18.0" prefWidth="82.0" text="ID Beneficiaire" />
+      <Label layoutX="340.0" layoutY="131.0" prefHeight="18.0" prefWidth="110.0" text="Rib beneficiaire" />
+      <TextField fx:id="beneficiaire_id" layoutX="451.0" layoutY="187.0" />
+      <TextField fx:id="rib_benef" layoutX="451.0" layoutY="128.0" />
+      <DatePicker fx:id="date_virement" layoutX="136.0" layoutY="127.0" prefHeight="26.0" prefWidth="150.0" />
+      <ListView fx:id="listv" layoutX="46.0" layoutY="315.0" prefHeight="200.0" prefWidth="499.0" />
+      <Button fx:id="bm" layoutX="627.0" layoutY="352.0" mnemonicParsing="false" onAction="#modifier" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: green;" text="Modifier" textFill="WHITE">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></Button>
+      <Button fx:id="bs" layoutX="629.0" layoutY="415.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: red;" text="Supprimer" textFill="WHITE" />
+      <Button layoutX="451.0" layoutY="277.0" mnemonicParsing="false" onAction="#refresh" prefHeight="26.0" prefWidth="90.0" text="Refresh" />
+      <TextField fx:id="prenom_benef" layoutX="452.0" layoutY="71.0" />
+      <Button fx:id="ben_btn" layoutX="649.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#ben_btn" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: #098e6d;" text="Beneficiaire" textFill="WHITE" />
+      <Button fx:id="back" layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#back" text="&lt;" />
+      
+   </children>
+</AnchorPane>
